@@ -6,12 +6,20 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply text-gray-800;
   }
 }
 
-input, textarea {
+input,
+textarea {
   @apply border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.custom-font {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
