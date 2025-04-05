@@ -21,7 +21,7 @@ import ScalaIcon from "../assets/Scala-Light.svg";
 import HbIcon from "../assets/Hibernate-Light.svg";
 import DIcon from "../assets/Docker.svg";
 import sqlIcon from "../assets/MySQL-Light.svg";
-
+import tableauIcon from "../assets/tableau-icon.svg";
 import mongoIcon from "../assets/MongoDB.svg";
 
 import gitIcon from "../assets/Github-Light.svg";
@@ -38,25 +38,52 @@ import AzIcon from "../assets/Azure-Light.svg";
 import RasIcon from "../assets/RaspberryPi-Light.svg";
 import LIcon from "../assets/Linux-Light.svg";
 import Resume from "../assets/KODI_VARUN.pdf";
+import scikitLearn from "../assets/SciKitLearn-Light.svg";
+import numpy from "../assets/numpy.svg";
+import pandas from "../assets/Pandas.svg";
 
-const frontEndSkills = [
-  { name: "JavaScript", icon: jsIcon },
-  { name: "React", icon: ReactIcon },
-  { name: "HTML", icon: HtmlIcon },
-  { name: "Flutter", icon: FIcon },
-  { name: "Angular", icon: AngIcon },
-  { name: "Postman", icon: PmanIcon },
-  { name: "Firebase", icon: FbIcon },
+import displayPic from "/IMG_4479.jpg";
+import uta from "/University_of_Texas_at_Arlington_seal.png";
+import mit from "/MITADT.png";
+import codon from "/Codontech.jpeg";
+import project1 from "/customer.png.webp";
+import project2 from "/defect.webp";
+import project3 from "/parkinson.jpg";
+import project4 from "/Knowledge.png.webp";
+import azure from "/micro.png";
+import udemy from "/udemy.png";
+import hobby1 from "/read.jpg";
+import hobby2 from "/ig1.jpg";
+import hobby3 from "/ig2.jpg";
+import hobby4 from "/gym.jpg";
+import hobby5 from "/medi.jpg";
+import hobby6 from "/photo.jpg";
+
+const dataScienceSkills = [
+  { name: "Python", icon: PyIcon },
+  { name: "Flask", icon: FkIcon },
+  { name: "TensorFlow", icon: TfIcon },
+  { name: "OpenCV", icon: OcIcon },
+  { name: "PyTorch", icon: PtIcon },
+  { name: "PyCharm", icon: PcIcon },
+  { name: "SciKit", icon: scikitLearn },
+  { name: "Numpy", icon: numpy },
+  { name: "Pandas", icon: pandas },
+  // { name: "JavaScript", icon: jsIcon },
+  // { name: "React", icon: ReactIcon },
+  // { name: "HTML", icon: HtmlIcon },
+  // { name: "Flutter", icon: FIcon },
+  // { name: "Angular", icon: AngIcon },
+  // { name: "Postman", icon: PmanIcon },
+  // { name: "Firebase", icon: FbIcon },
 ];
 
-const backEndSkills = [
-  { name: "MongoDB", icon: mongoIcon },
-  { name: "MySQL", icon: sqlIcon },
-  { name: "C++", icon: cppIcon },
+const visualizationSkills = [
+  { name: "Tableau", icon: tableauIcon},
+  // { name: "MongoDB", icon: mongoIcon },
+  // { name: "MySQL", icon: sqlIcon },
+  // { name: "C++", icon: cppIcon },
   { name: "R", icon: RIcon },
-  { name: "Python", icon: PyIcon },
-  { name: "Django", icon: DjIcon },
-  { name: "Flask", icon: FkIcon },
   { name: "Spring", icon: SpIcon },
   { name: "Kafka", icon: KfIcon },
   { name: "NodeJs", icon: NjIcon },
@@ -67,6 +94,7 @@ const backEndSkills = [
 ];
 
 const otherSkills = [
+  { name: "Django", icon: DjIcon },
   { name: "Github", icon: gitIcon },
   { name: "VsCode", icon: VsIcon },
   { name: "Eclipse", icon: EcIcon },
@@ -92,10 +120,10 @@ function SkillsSection() {
       {/* Skills Container */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Front-end Skills */}
-        <div className="bg-white p-6 rounded-xl shadow-lg">
-          <h4 className="text-xl font-semibold mb-4">Front-end</h4>
+        <div className="bg-white p-6 rounded-xl shadow-2xl">
+          <h4 className="text-xl font-semibold mb-4">Data Science</h4>
           <div className="flex flex-wrap gap-4 justify-center">
-            {frontEndSkills.map((skill) => (
+            {dataScienceSkills.map((skill) => (
               <div key={skill.name} className="flex flex-col items-center w-20">
                 <img src={skill.icon} alt={skill.name} className="w-12 h-12 object-contain mb-2" />
                 <p className="text-sm text-gray-700">{skill.name}</p>
@@ -105,10 +133,10 @@ function SkillsSection() {
         </div>
 
         {/* Back-end Skills */}
-        <div className="bg-white p-6 rounded-xl shadow-lg">
-          <h4 className="text-xl font-semibold mb-4">Back-end</h4>
+        <div className="bg-white p-6 rounded-xl shadow-2xl">
+          <h4 className="text-xl font-semibold mb-4">Data Visualization</h4>
           <div className="flex flex-wrap gap-4 justify-center">
-            {backEndSkills.map((skill) => (
+            {visualizationSkills.map((skill) => (
               <div key={skill.name} className="flex flex-col items-center w-20">
                 <img src={skill.icon} alt={skill.name} className="w-12 h-12 object-contain mb-2" />
                 <p className="text-sm text-gray-700">{skill.name}</p>
@@ -118,8 +146,8 @@ function SkillsSection() {
         </div>
 
         {/* Other Skills */}
-        <div className="bg-white p-6 rounded-xl shadow-lg">
-          <h4 className="text-xl font-semibold mb-4">Other</h4>
+        <div className="bg-white p-6 rounded-xl shadow-2xl">
+          <h4 className="text-xl font-semibold mb-4">Others</h4>
           <div className="flex flex-wrap gap-4 justify-center">
             {otherSkills.map((skill) => (
               <div key={skill.name} className="flex flex-col items-center w-20">
@@ -136,96 +164,48 @@ function SkillsSection() {
 
 function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-white text-gray-800">
+    <section id="contact" className="text-gray-800">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Heading */}
-        <h2 className="text-4xl font-bold text-center mb-16 flex items-center justify-center">
+        <h2 className="text-4xl font-bold text-center mb-6 flex items-center justify-center">
           <Send className="mr-4 text-blue-500" size={32} />
           Get In Touch
         </h2>
 
-        {/* Grid: Left (Contact Info) / Right (Form) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex justify-around">
           {/* LEFT SIDE: Contact Info */}
-          <div className="flex flex-col justify-center">
-            <h3 className="text-2xl font-semibold mb-4">Let’s Connect</h3>
-            <p className="text-gray-600 leading-relaxed mb-6">Feel free to reach out for collaborations...</p>
+          <div className="flex flex-col justify-center align-middle">
+            <h3 className="text-2xl font-semibold">Let’s Connect</h3>
+            <p className="text-gray-600 leading-relaxed">Feel free to reach out for collaborations...</p>
+          </div>
+          {/* Contact Details */}
+          <div className="flex flex-col justify-around space-y-4">
+            <div className="flex items-center">
+              <Mail className="text-blue-500 mr-2" />
+              <span className="text-blue-500 hover:underline">sarthakhatwar1606@gmail.com</span>
+            </div>
 
-            {/* Contact Details */}
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <Mail className="text-blue-500 mr-2" />
-                <span className="text-blue-500 hover:underline">sarthakhatwar1606@gmail.com</span>
-              </div>
-
-              <div className="flex items-center">
-                <Linkedin className="text-blue-500 mr-2" />
-                <a
-                  href="https://linkedin.com/in/sarthakhatwar1606"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:underline">
-                  linkedin.com/in/sarthakhatwar1606
-                </a>
-              </div>
-              <div className="flex items-center">
-                <Github className="text-blue-500 mr-2" />
-                <a
-                  href="https://github.com/sarthakhatwar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:underline">
-                  github.com/sarthakhatwar
-                </a>
-              </div>
+            <div className="flex items-center">
+              <Linkedin className="text-blue-500 mr-2" />
+              <a
+                href="https://linkedin.com/in/sarthakhatwar1606"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline">
+                linkedin.com/in/sarthakhatwar1606
+              </a>
+            </div>
+            <div className="flex items-center">
+              <Github className="text-blue-500 mr-2" />
+              <a
+                href="https://github.com/Sarthakhatwar1606"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline">
+                github.com/Sarthakhatwar1606
+              </a>
             </div>
           </div>
-
-          {/* RIGHT SIDE: Contact Form */}
-          <form className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="mt-1 block w-full rounded-md border-gray-300 bg-white text-gray-700 
-             focus:border-blue-500 focus:ring-blue-500 shadow-sm"
-                placeholder="Your name"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="mt-1 block w-full rounded-md border-gray-300 bg-white text-gray-700 
-             focus:border-blue-500 focus:ring-blue-500 shadow-sm"
-                placeholder="your.email@example.com"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={5}
-                className="mt-1 block w-full rounded-md border-gray-300 bg-white text-gray-700 
-             focus:border-blue-500 focus:ring-blue-500 shadow-sm"
-                placeholder="Your message..."
-              />
-            </div>
-
-            <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
-              Send Message
-            </button>
-          </form>
         </div>
       </div>
     </section>
@@ -276,7 +256,7 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="pt-32 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-around">
             <div className="md:w-1/2">
               <h1 className="text-5xl font-bold text-gray-900 mb-6">Hi, I'm Sarthak Hatwar</h1>
               <p className="text-xl text-gray-600 mb-8">
@@ -286,7 +266,7 @@ function App() {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/sarthakhatwar"
+                  href="https://github.com/Sarthakhatwar1606"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
@@ -307,16 +287,16 @@ function App() {
               </div>
               {/* TODO: replace resume in assets */}
               <a href={Resume} download="my_resume" target="_blank">
-                <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold mt-6 py-2 px-4 rounded inline-flex items-center">
+                <button className="bg-blue-400 hover:bg-blue-500 text-gray-800 font-bold mt-6 py-2 px-4 rounded inline-flex items-center">
                   <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                     <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
                   </svg>
-                  <span>Download Resume</span>
+                  <span>Download CV</span>
                 </button>
               </a>
             </div>
             <div className="md:w-1/3 mt-12 md:mt-0">
-              <img src="/IMG_4479.jpg" alt="Data Science Illustration" className="rounded-lg shadow-2xl" />
+              <img src={displayPic} alt="Data Science Illustration" className="rounded-lg shadow-2xl" />
             </div>
           </div>
         </div>
@@ -330,27 +310,27 @@ function App() {
             Education
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="flex items-start justify-between">
-                <h3 className="text-2xl font-semibold mb-2">Masters in Science</h3>
-                <div className="p-4 rounded-md">
-                  <img src="/University_of_Texas_at_Arlington_seal.svg.png" alt="data_science" className="h-12 " />
-                </div>
+            <div className="bg-white p-6 rounded-xl shadow-2xl flex justify-around">
+              <div className="flex-col">
+                <h3 className="text-2xl font-semibold mb-2">Master of Science</h3>
+                <p className="text-gray-600 mb-2 text-lg">Data Science</p>
+                <p className="text-gray-500">University of Texas at Arlington, 2023–2025</p>
+                <p className="text-gray-500">CGPA: 3.67/4</p>
               </div>
-              <p className="text-gray-600 mb-2">Data Science</p>
-              <p className="text-gray-500">University of Texas At Arlington, 2023–2025</p>
-              <p className="text-gray-500">CGPA: 3.67/4</p>
+              <div className="p-4 rounded-md">
+                <img src={uta} alt="data_science" className="h-12 " />
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="flex items-start justify-between">
-                <h3 className="text-2xl font-semibold mb-2"> Bachlors of Technology</h3>
-                <div className=" p-4 rounded-md">
-                  <img src="/MITADT.png" alt="computer_science" className="h-12" />
-                </div>
+            <div className="bg-white p-6 rounded-xl shadow-2xl flex justify-around">
+              <div className="flex-col">
+                <h3 className="text-2xl font-semibold mb-2">Bachelor of Technology</h3>
+                <p className="text-gray-600 mb-2 text-lg">Computer Science </p>
+                <p className="text-gray-500">MIT ADT University, Pune, 2019-2023</p>
+                <p className="text-gray-500">CGPA: 8/10 </p>
               </div>
-              <p className="text-gray-600 mb-2">Computer Science </p>
-              <p className="text-gray-500">MIT ADT University ,Pune , 2019-2023</p>
-              <p className="text-gray-500">CGPA: 8/10 </p>
+              <div className="p-4 rounded-md">
+                <img src={mit} alt="computer_science" className="h-12" />
+              </div>
             </div>
           </div>
         </div>
@@ -363,16 +343,16 @@ function App() {
             <Briefcase className="mr-4 text-green-500" />
             Experience
           </h2>
-          <div className="bg-white p-6 rounded-xl shadow-lg">
+          <div className="bg-white p-6 rounded-xl shadow-2xl">
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Data Engineer Intern</h3>
                 <p className="text-gray-600">CODON Tech </p>
                 <p className="text-gray-500">August 2022 - July 2022</p>
               </div>
-              <img src="/Codontech .jpeg" alt="Codon" className="h-8" />
+              <img src={codon} alt="Codon" className="h-8" />
             </div>
-            <ul className="mt-4 space-y-2 list-disc list-inside text-gray-600">
+            <ul className="mt-4 ml-4 space-y-2 list-disc list-outside text-gray-600 text-justify">
               <li>
                 Engineered an automated tumor detection solution leveraging OpenCV and OCR, achieving 74.31% precision in real-time
                 detection while streamlining data analytics for informed decision-making.
@@ -396,12 +376,12 @@ function App() {
                 analytics and visualization.
               </li>
             </ul>
-            <h1 className="mt-4 text-2xl font-bold text-center flex items-center">
-              <Code className="mr-4 text-green-500" />
-              Skill Acquired
+            <h1 className="mt-4 text-xl font-bold text-center flex items-center">
+              <Code className="mr-2 text-green-500" />
+              Skills Acquired
             </h1>
 
-            <div className="flex flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
+            <div className="flex mt-2 flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
               {["Python", "CNN", "TensorFlow", "Keras", "Machine Learning", "Data Visualization", "MySQL"].map((skill, index) => (
                 <span key={index} className="bg-gray-700 text-gray-200 text-bold text-sm px-4 py-1 rounded-full">
                   {skill}
@@ -419,16 +399,16 @@ function App() {
             <Code className="mr-4 text-green-500" />
             Projects
           </h2>
-          <div className="bg-white p-6 rounded-xl shadow-lg">
+          <div className="bg-white p-6 rounded-xl shadow-2xl">
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Customer Churn Prediction</h3>
 
                 <p className="text-gray-500">Spetember 2024 - Januray 2025</p>
               </div>
-              <img src="/customer.png.webp" className="h-8" />
+              <img src={project1} className="h-8" />
             </div>
-            <ul className="mt-4 space-y-2 list-disc list-inside text-gray-600">
+            <ul className="mt-4 ml-4 space-y-2 list-disc list-outside text-gray-600 text-justify">
               <li>
                 Built a predictive model leveraging a fine-tuned XGBoost classifier to detect potential customer churn in a large
                 telecom dataset, achieving 92% accuracy. Performed data preprocessing, feature engineering, and exploratory data
@@ -447,12 +427,12 @@ function App() {
                 20%.
               </li>
             </ul>
-            <h1 className="mt-4 text-2xl font-bold text-center flex items-center">
-              <Code className="mr-4 text-green-500" />
+            <h1 className="mt-4 text-xl font-bold text-center flex items-center">
+              <Code className="mr-2 text-green-500" />
               Tools Used
             </h1>
 
-            <div className="flex flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
+            <div className="flex mt-2 flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
               {[
                 "Python",
                 "Pytorch",
@@ -473,16 +453,16 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-lg mt-6">
+          <div className="bg-white p-6 rounded-xl shadow-2xl mt-6">
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Defect detection on metallic components using object detection models</h3>
 
                 <p className="text-gray-500">Janurary 2024 - April 2024</p>
               </div>
-              <img src="/defect.webp" className="h-8" />
+              <img src={project2} className="h-8" />
             </div>
-            <ul className="mt-4 space-y-2 list-disc list-inside text-gray-600">
+            <ul className="mt-4 ml-4 space-y-2 list-disc list-outside text-gray-600 text-justify">
               <li>
                 Enhanced defect detection accuracy by implementing PyTorch-based models, achieving 48% validation accuracy using mAP
                 (mean average precision) as a performance metric across varied defect types.{" "}
@@ -498,12 +478,12 @@ function App() {
                 identification on metallic surfaces.
               </li>
             </ul>
-            <h1 className="mt-4 text-2xl font-bold text-center flex items-center">
-              <Code className="mr-4 text-green-500" />
+            <h1 className="mt-4 text-xl font-bold text-center flex items-center">
+              <Code className="mr-2 text-green-500" />
               Tools Used
             </h1>
 
-            <div className="flex flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
+            <div className="flex mt-2 flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
               {["Python", "CNN", "TensorFlow", "Keras", "Machine Learning", "MySQL", "OpenCV", "PyTorch"].map((skill, index) => (
                 <span key={index} className="bg-gray-700 text-gray-200 text-bold text-sm px-4 py-1 rounded-full">
                   {skill}
@@ -512,16 +492,16 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-lg mt-6">
+          <div className="bg-white p-6 rounded-xl shadow-2xl mt-6">
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Parkinson’s Disease Detection using Handwriting</h3>
 
                 <p className="text-gray-500">September 2022 - May 2023</p>
               </div>
-              <img src="/parkinson.jpg" className="h-8" />
+              <img src={project3} className="h-8" />
             </div>
-            <ul className="mt-4 space-y-2 list-disc list-inside text-gray-600">
+            <ul className="mt-4 ml-4 space-y-2 list-disc list-outside text-gray-600 text-justify">
               <li>
                 Designed a diagnostic system utilizing a custom dataset of 2,000+ handwriting samples, achieving 98.5% accuracy with
                 VGG16 for early Parkinson’s detection.
@@ -536,12 +516,12 @@ function App() {
                 improve early diagnosis rates.
               </li>
             </ul>
-            <h1 className="mt-4 text-2xl font-bold text-center flex items-center">
-              <Code className="mr-4 text-green-500" />
+            <h1 className="mt-4 text-xl font-bold text-center flex items-center">
+              <Code className="mr-2 text-green-500" />
               Tools Used
             </h1>
 
-            <div className="flex flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
+            <div className="flex mt-2 flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
               {["Python", "CNN", "Data Visualization", "MySQL", "Flask", "Tableau", "TensorFlow", "Keras", "Machine Learning"].map(
                 (skill, index) => (
                   <span key={index} className="bg-gray-700 text-gray-200 text-bold text-sm px-4 py-1 rounded-full">
@@ -552,16 +532,16 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-lg mt-6">
+          <div className="bg-white p-6 rounded-xl shadow-2xl mt-6">
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Knowledge Distillation</h3>
 
                 <p className="text-gray-500">February 2022 - May 2022</p>
               </div>
-              <img src="/Knowledge.png.webp" className="h-8" />
+              <img src={project4} className="h-8" />
             </div>
-            <ul className="mt-4 space-y-2 list-disc list-inside text-gray-600">
+            <ul className="mt-4 ml-4 space-y-2 list-disc list-outside text-gray-600 text-justify">
               <li>
                 Transferred knowledge from a large instructor model to MobileNetV2, reducing the model size by 60% while maintaining
                 functionality for real-world applications.
@@ -576,12 +556,12 @@ function App() {
                 between com- pactness and accuracy. This ensured efficient performance without sacrificing reliability.
               </li>
             </ul>
-            <h1 className="mt-4 text-2xl font-bold text-center flex items-center">
-              <Code className="mr-4 text-green-500" />
+            <h1 className="mt-4 text-xl font-bold text-center flex items-center">
+              <Code className="mr-2 text-green-500" />
               Tools Used
             </h1>
 
-            <div className="flex flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
+            <div className="flex mt-2 flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
               {["Python", "CNN", "TensorFlow", "Keras", "Machine Learning", "Data Visualization", "MySQL"].map((skill, index) => (
                 <span key={index} className="bg-gray-700 text-gray-200 text-bold text-sm px-4 py-1 rounded-full">
                   {skill}
@@ -603,9 +583,7 @@ function App() {
           {/* Skills */}
           <div className="mb-8">
             <div className="md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-lg mt-6">
-                <SkillsSection />
-              </div>
+              <SkillsSection />
             </div>
           </div>
 
@@ -615,33 +593,40 @@ function App() {
               <Award className="mr-2 text-yellow-500" />
               Certifications
             </h3>
-            <div className="bg-white p-6 rounded-xl shadow-lg mt-6">
+            <div className="bg-white p-6 rounded-xl shadow-2xl mt-6">
               <div className="flex items-start justify-between">
-                <h3 className="text-2xl font-semibold mb-2">AWS Certified Data Engineer - Associate</h3>
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">AWS Certified Data Engineer - Associate</h3>
+                  <a
+                    href="https://cp.certmetrics.com/amazon/en/public/verify/credential/b1092b03cfd746bd8dac44d1aa6c0b4c"
+                    target="_blank" className="text-blue-600 underline">
+                    Link
+                  </a>
+                </div>
                 <div className=" p-4 rounded-md">
-                  <img src="assets/AWS-Dark.svg" alt="AWS" className="h-12" />
+                  <img src={AWsIcon} alt="AWS" className="h-12" />
                 </div>
               </div>
             </div>
           </div>
 
           <div>
-            <div className="bg-white p-6 rounded-xl shadow-lg mt-6">
+            <div className="bg-white p-6 rounded-xl shadow-2xl mt-6">
               <div className="flex items-start justify-between">
                 <h3 className="text-2xl font-semibold mb-2">Microsoft Azure AZ-900</h3>
                 <div className=" p-4 rounded-md">
-                  <img src="/micro.png" alt="Azure" className="h-12" />
+                  <img src={azure} alt="Azure" className="h-12" />
                 </div>
               </div>
             </div>
           </div>
 
           <div>
-            <div className="bg-white p-6 rounded-xl shadow-lg mt-6">
+            <div className="bg-white p-6 rounded-xl shadow-2xl mt-6">
               <div className="flex items-start justify-between">
                 <h3 className="text-2xl font-semibold mb-2">AI/ML with python</h3>
                 <div className=" p-4 rounded-md">
-                  <img src="/udemy.png" alt="AI/ML" className="h-12" />
+                  <img src={udemy} alt="AI/ML" className="h-12" />
                 </div>
               </div>
             </div>
@@ -656,42 +641,42 @@ function App() {
             Hobbies
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 border rounded-lg bg-white shadow-lg">
+            <div className="p-6 border rounded-lg bg-white shadow-2xl">
               <div className="flex items-center mb-2">
-                <img src="read.jpg" alt="i1" className="h-15" />
+                <img src={hobby1} alt="i1" className="h-15" />
               </div>
               <h1 className="text-xl font-semibold text-center">Reading Tech Blogs</h1>
             </div>
-            <div className="p-6 border rounded-lg bg-white shadow-lg">
+            <div className="p-6 border rounded-lg bg-white shadow-2xl">
               <div className="flex items-center mb-2">
-                <img src="ig1.jpg" alt="i2" className="h-15" />
+                <img src={hobby2} alt="i2" className="h-15" />
               </div>
               <h1 className="text-xl font-semibold text-center">Basketball</h1>
             </div>
-            <div className="p-6 border rounded-lg bg-white shadow-lg">
+            <div className="p-6 border rounded-lg bg-white shadow-2xl">
               <div className="flex items-center mb-2 ">
-                <img src="ig2.jpg" alt="i3" className="h-15" />
+                <img src={hobby3} alt="i3" className="h-15" />
               </div>
               <h1 className="text-xl font-semibold text-center">Traveling</h1>
             </div>
 
-            <div className="p-6 border rounded-lg bg-white shadow-lg">
+            <div className="p-6 border rounded-lg bg-white shadow-2xl">
               <div className="flex items-center mb-2">
-                <img src="gym.jpg" alt="i4" className="h-15" />
+                <img src={hobby4} alt="i4" className="h-15" />
               </div>
               <h1 className="text-xl font-semibold text-center">Fitness & Gym</h1>
             </div>
 
-            <div className="p-6 border rounded-lg bg-white shadow-lg">
+            <div className="p-6 border rounded-lg bg-white shadow-2xl">
               <div className="flex items-center mb-2">
-                <img src="medi.jpg" alt="i4" className="h-15" />
+                <img src={hobby5} alt="i4" className="h-15" />
               </div>
               <h1 className="text-xl font-semibold text-center">Meditation</h1>
             </div>
 
-            <div className="p-6 border rounded-lg bg-white shadow-lg">
+            <div className="p-6 border rounded-lg bg-white shadow-2xl">
               <div className="flex items-center mb-2">
-                <img src="photo.jpg" alt="i4" className="h-15" />
+                <img src={hobby6} alt="i4" className="h-15" />
               </div>
               <h1 className="text-xl font-semibold text-center">Photography</h1>
             </div>
@@ -700,7 +685,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="pt-10 pb-24">
         <div className="max-w-7xl mx-auto px-4">
           <ContactSection />
         </div>
@@ -709,7 +694,7 @@ function App() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-5 p-2 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 transition">
+        className="fixed bottom-8 right-5 p-2 bg-gray-800 text-white rounded-full shadow-2xl hover:bg-gray-700 transition">
         <ArrowUp size={24} />
       </button>
     </div>
